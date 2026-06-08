@@ -5,6 +5,7 @@ vim.pack.add({
 })
 
 local events = require("neo-tree.events")
+local Snacks = require("snacks")
 require("neo-tree").setup({
   event_handlers = {
     {
