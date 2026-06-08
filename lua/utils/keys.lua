@@ -37,14 +37,42 @@ local function apply_key(entry)
   vim.keymap.set(mode, lhs, rhs, opts)
 end
 
--- Register keymaps from a lazy.vim-style plugin spec table.
--- Safe to call with nil or non-table values (e.g. plugins that return nothing).
+-- Process a lazy.vim-style plugin spec: register keys and invoke the config function.
+-- Also recurses into dependencies that carry their own config or keys.
+-- Handles both a single spec table and an array of specs (e.g. theme.lua).
+-- Safe to call with nil or non-table values.
 function M.register(spec)
   if type(spec) ~= "table" then return end
-  local keys = spec.keys
-  if not keys then return end
-  for _, entry in ipairs(keys) do
-    apply_key(entry)
+
+  -- Array of specs: { { "plugin-a", ... }, { "plugin-b", ... } }
+  -- Detected by the first element being a table rather than the plugin name string.
+  if type(spec[1]) == "table" then
+    for _, s in ipairs(spec) do
+      M.register(s)
+    end
+    return
+  end
+
+  -- Recurse into dependencies before the parent so they are ready when config runs.
+  if type(spec.dependencies) == "table" then
+    for _, dep in ipairs(spec.dependencies) do
+      if type(dep) == "table" then
+        M.register(dep)
+      end
+    end
+  end
+
+  -- Register keys
+  if type(spec.keys) == "table" then
+    for _, entry in ipairs(spec.keys) do
+      apply_key(entry)
+    end
+  end
+
+  -- Call config. lazy.vim passes (plugin, opts) but current plugin files don't use
+  -- those args, so we pass (spec, opts) as a close approximation.
+  if type(spec.config) == "function" then
+    spec.config(spec, spec.opts or {})
   end
 end
 

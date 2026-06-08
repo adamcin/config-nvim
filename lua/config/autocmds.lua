@@ -50,7 +50,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- custom options for text/markdown files
-local markdown_options = vim.api.nvim_create_augroup("MardownOptions", {})
+local markdown_options = vim.api.nvim_create_augroup("MarkdownOptions", {})
 vim.api.nvim_create_autocmd("FileType", {
 	group = markdown_options,
 	pattern = { "markdown", "text", "gitcommit" },
@@ -76,6 +76,10 @@ vim.api.nvim_create_autocmd("PackChanged", {
 
     if name == "markdown-preview" and changed then
       vim.system({ 'cd app && yarn install' }, { cwd = e.data.path })
+    end
+
+    if name == "nvim-treesitter" and changed then
+      require("nvim-treesitter").TSUpdate()
     end
   end,
 })

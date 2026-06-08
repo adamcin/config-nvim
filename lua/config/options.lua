@@ -16,7 +16,7 @@ vim.opt.autoindent = true
 
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "100"
+-- vim.opt.colorcolumn = "100"
 vim.opt.showmatch = true
 vim.opt.matchtime = 2
 vim.opt.completeopt = "menuone,noinsert,noselect"
@@ -68,7 +68,7 @@ vim.opt.wildignorecase = true
 
 vim.opt.guicursor = {
 	"n-v-c:block",
-	"i-ci-ve:block",
+	"i-ci-ve:ver25",
 	"r-cr:hor20",
 	"o:hor50",
 	"a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
