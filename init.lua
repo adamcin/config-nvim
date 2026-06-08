@@ -1,0 +1,28 @@
+require("config")
+
+-- Load a plugin module and register any lazy.vim-style keys specs it returns.
+local function load(mod)
+  require("utils.keys").register(require(mod))
+end
+
+load("plugins.theme")
+load("plugins.web-devicons")
+load("plugins.mini")
+load("plugins.snacks")
+load("plugins.trouble-nvim")
+load("plugins.neo-tree")
+load("plugins.nvim-treesitter")
+load("plugins.vim-fugitive")
+load("plugins.gitsigns-nvim")
+load("plugins.vim-tmux-navigator")
+load("plugins.fzf-lua")
+load("plugins.which-key")
+load("plugins.mason-nvim")
+load("plugins.nvim-lspconfig")
+load("plugins.lspsaga-nvim")
+load("plugins.nvim-cmp")
+load("plugins.nvim-dap-ui")
+load("plugins.markdown-preview")
+load("plugins.claudecode")
+load("plugins.lualine-nvim")
+require("servers")
