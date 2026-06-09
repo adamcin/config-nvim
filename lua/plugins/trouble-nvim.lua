@@ -9,6 +9,8 @@ vim.pack.add({
   { src = "https://github.com/folke/trouble.nvim" }
 })
 
+require("trouble").setup()
+
 return {
 	"folke/trouble.nvim",
 	opts = {}, -- for default options, refer to the configuration section for custom setup.
