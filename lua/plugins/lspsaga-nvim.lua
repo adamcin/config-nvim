@@ -18,6 +18,10 @@ return {
 			definition_action_keys = {
 				edit = "<CR>",
 			},
+
+      lightbulb = {
+        sign = false,
+      },
 		})
 	end,
 	dependencies = {
