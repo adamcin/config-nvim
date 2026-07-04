@@ -45,7 +45,7 @@ return function(capabilities)
 			"lua",
 			"markdown",
 			"python",
-			"sh",
+			-- "sh",
 			"svelte",
 			"typescript",
 			"typescriptreact",

@@ -6,11 +6,20 @@
 -- ================================================================================================
 
 vim.pack.add({
+  { src = "https://github.com/xiyaowong/nvim-transparent" },
   { src = "https://github.com/savq/melange-nvim" },
   { src = "https://github.com/EdenEast/nightfox.nvim" },
 })
 
 -- vim.cmd.colorscheme("melange")
+
+vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, {
+  "NeoTreeNormal",
+  "NeoTreeNormalNC",
+  "NeoTreeSignColumn",
+  "NeoTreeEndOfBuffer",
+  "NeoTreeWinSeparator",
+})
 
 return {
 	{

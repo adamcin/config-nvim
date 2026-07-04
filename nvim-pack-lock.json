@@ -33,6 +33,14 @@
       "rev": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90",
       "src": "https://github.com/saadparwaiz1/cmp_luasnip"
     },
+    "codecompanion.nvim": {
+      "rev": "c8bd2d0ff58b75d9a76f0a17115581754824b725",
+      "src": "https://github.com/olimorris/codecompanion.nvim"
+    },
+    "copilot.vim": {
+      "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
+      "src": "https://github.com/github/copilot.vim"
+    },
     "efmls-configs-nvim": {
       "rev": "2f5dc31042cc76fc3d5a859842a8416085c4d41f",
       "src": "https://github.com/creativenull/efmls-configs-nvim"
@@ -125,6 +133,10 @@
     "nvim-nio": {
       "rev": "21f5324bfac14e22ba26553caf69ec76ae8a7662",
       "src": "https://github.com/nvim-neotest/nvim-nio"
+    },
+    "nvim-transparent": {
+      "rev": "e00ca1cf09caef575edf8da7e5a8b9193893b4c7",
+      "src": "https://github.com/xiyaowong/nvim-transparent"
     },
     "nvim-treesitter": {
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
