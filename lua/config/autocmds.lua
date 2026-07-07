@@ -83,3 +83,9 @@ vim.api.nvim_create_autocmd("PackChanged", {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  desc = "Run scripts after all other vim init logic",
+  callback = function(e)
+  end,
+})
