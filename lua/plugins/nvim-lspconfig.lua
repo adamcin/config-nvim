@@ -12,6 +12,7 @@ vim.pack.add({
   { src = "https://github.com/creativenull/efmls-configs-nvim" },
   { src = "https://github.com/hrsh7th/cmp-nvim-lsp" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
+  --{ src = "https://github.com/mfussenegger/nvim-jdtls" },
 })
 
 return {
@@ -20,6 +21,7 @@ return {
 		{ "mason-org/mason.nvim", opts = {} }, -- LSP/DAP/Linter installer & manager
 		"creativenull/efmls-configs-nvim", -- Preconfigured EFM Language Server setups
 		"hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for LSP-based completion
+    --"mfussenegger/nvim-jdtls"
 	},
 	config = function()
 		require("utils.diagnostics").setup()

@@ -2,7 +2,7 @@ require("config")
 
 -- Load a plugin module and register any lazy.vim-style keys specs it returns.
 local function load(mod)
-  require("utils.keys").register(require(mod))
+	require("utils.keys").register(require(mod))
 end
 
 load("plugins.theme")
@@ -23,9 +23,11 @@ load("plugins.mason-nvim")
 load("plugins.nvim-lspconfig")
 load("plugins.lspsaga-nvim")
 load("plugins.nvim-dap-ui")
+load("plugins.nvim-java")
 load("plugins.markdown-preview")
 load("plugins.copilot")
 load("plugins.claudecode")
+load("plugins.jira")
 --load("plugins.codecompanion")
 load("plugins.lualine-nvim")
 load("plugins.neotest")
