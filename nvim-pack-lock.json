@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "CopilotChat.nvim": {
+      "rev": "004ced055d8db59561cfcddc5f141ccd8d5a033b",
+      "src": "https://github.com/CopilotC-Nvim/CopilotChat.nvim"
+    },
     "FixCursorHold.nvim": {
       "rev": "1900f89dc17c603eec29960f57c00bd9ae696495",
       "src": "https://github.com/antoinemadec/FixCursorHold.nvim"
@@ -60,6 +64,10 @@
     "gitsigns.nvim": {
       "rev": "25050e4ed39e628282831d4cbecb1850454ce915",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "jira-oil.nvim": {
+      "rev": "2cf777dd818a1b685817ae52d6763819cfb0de1f",
+      "src": "https://github.com/sbulav/jira-oil.nvim"
     },
     "jira.nvim": {
       "rev": "854da6815aedf972e1384728c6e7d1d3209d8e8e",

@@ -40,7 +40,6 @@ vim.opt.timeoutlen = 500
 vim.opt.autoread = true
 vim.opt.autowrite = false
 
-
 vim.opt.diffopt:append("vertical")
 vim.opt.diffopt:append("algorithm:patience")
 vim.opt.diffopt:append("linematch:60")
@@ -49,7 +48,7 @@ local undodir = "~/.local/share/nvim/undodir"
 vim.opt.undodir = vim.fn.expand(undodir)
 -- local undodir_path = "~/.local/share/nvim/undodir"
 -- if vim.fn.isdirectory(undodir_path) == 0 then
-	-- vim.fn.mkdir(undodir_path, "p")
+-- vim.fn.mkdir(undodir_path, "p")
 -- end
 
 vim.opt.errorbells = false
@@ -81,4 +80,3 @@ vim.opt.foldlevel = 99
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-
